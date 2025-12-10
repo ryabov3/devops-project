@@ -11,10 +11,10 @@
 ```bash
 .
 ├── artsofte-chart/          # Helm chart для деплоя сервиса
-├── api.py                   # Flask/FastAPI приложение для инференса модели
+├── api.py                   # FastAPI приложение для инференса модели
 ├── Dockerfile               # Docker-образ API
 ├── loan_data.csv            # Исходные данные для обучения модели
-├── models_training.ipynb    # Ноутбук с обучением модели и MLflow
+├── models_training.ipynb    # Ноутбук с обучением моделей и MLflow
 ├── requirements_api.txt     # Зависимости для API
 ├── requirements_train.txt   # Зависимости для обучения модели
 └── .gitignore               # Игнорируемые файлы
