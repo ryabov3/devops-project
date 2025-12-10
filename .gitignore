@@ -1,0 +1,4 @@
+__pycache__/
+mlruns/
+mlflow.db
+model.pkl

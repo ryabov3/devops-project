@@ -1,0 +1,16 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: prom
+  namespace: {{ .Values.serviceMonitor.namespace }}
+spec:
+  selector:
+    matchLabels:
+      app: api
+  namespaceSelector:
+    matchNames:
+      - project
+  endpoints:
+  - port: http
+    path: /metrics
+    interval: {{ .Values.serviceMonitor.interval }}

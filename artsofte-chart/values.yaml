@@ -1,0 +1,21 @@
+replicaCount: 3
+
+image:
+  repository: ryabov3/loan
+  tag: "1.0"
+
+service:
+  type: NodePort
+  nodePort: 30081
+  port: 8000
+
+serviceMonitor:
+  interval: 10s
+  namespace: monitoring
+
+ingress:
+  className: "nginx"
+  host: loan.local
+  path: /
+  pathType: Prefix
+
